@@ -1,0 +1,136 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(red, white);
+    max-width: 100%;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner img {
+
+}
+
+.actual-projects {
+    text-align: center;
+}
+
+.card-holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;           /* расстояние между карточками */
+    justify-content: center; /* по центру */
+}
+
+.card {
+    width: 400px;       /* фиксированная ширина карточки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;        /* по ширине карточки */
+    height: 300px;      /* фиксированная высота */
+    object-fit: cover;  /* кадрирует изображение, не растягивая */
+    border-radius: 8px; /* по желанию */
+}
+
+.title {
+    margin: 10px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to top, red, white);
+    height: 5vh;
+}
+
+.address, .phone {
+    margin-left: 20%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about-us {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.about-us:hover {
+    color: blueviolet;
+    transition: .3s;
+}
+
+.actual-projects {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #ec0606;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: black;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+a.disabled {
+    pointer-events: none; /* отключает клики */
+    color: gray;          /* визуально показать неактивность */
+    cursor: default;
+    text-decoration: none;
+}
