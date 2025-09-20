@@ -197,7 +197,8 @@ a.disabled {
     }
 
     .burger {
-        display: flex; /* show burger on mobile */
+        display: flex;
+        margin-right: 10px;/* show burger on mobile */
     }
 
     .nav-links.active {
