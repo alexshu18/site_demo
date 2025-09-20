@@ -34,8 +34,12 @@ main {
     gap: 20px;
 }
 
-.banner {
+.banner, .mobile-banner {
     text-align: center;
+}
+
+.mobile-banner {
+    display: none;
 }
 
 .banner img {
@@ -133,4 +137,70 @@ a.disabled {
     color: gray;          /* визуально показать неактивность */
     cursor: default;
     text-decoration: none;
+}
+
+/* Hide on small phones */
+@media (max-width: 480px) {
+    .banner {
+        display: none;
+    }
+    .mobile-banner {
+        display: block;
+    }
+}
+
+/* Hide on tablets */
+@media (max-width: 768px) and (min-width: 481px) {
+    .banner {
+        display: none;
+    }
+    .mobile-banner {
+        display: block;
+    }
+}
+
+
+/* Desktop: show nav links, hide burger */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #000; /* adjust color */
+    display: block;
+    border-radius: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* hide links by default */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #fff;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .burger {
+        display: flex; /* show burger on mobile */
+    }
+
+    .nav-links.active {
+        display: flex; /* show links when burger clicked */
+    }
 }
